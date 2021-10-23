@@ -15,6 +15,18 @@ body {
     --white: #ffffff;
 }
 
+.bg-da-blue {
+    background-color: var(--da-blue) !important;
+}
+
+.br-1 {
+    border-radius: 1rem !important;
+}
+
+.color-da-blue {
+    color: var(--da-blue) !important;
+}
+
 .welcome-page {
     color: #041461;
     font-family: "Archivo Black", sans-serif;

@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import LoginScreen from "./screens/LoginScreen/LoginScreen"
 import WelcomeScreen from "./screens/WelcomeScreen"
 
+import "./index.css"
+
 const App: FC = () => {
     return (
         <Router>
