@@ -73,7 +73,7 @@ const LoginScreen: FC = () => {
 
                             <span className="my-2 p-2">
                                 Don't have an account ?{" "}
-                                <Link to="/registration">Register</Link>
+                                <Link to="register">Register</Link>
                             </span>
                         </Form>
                     </div>

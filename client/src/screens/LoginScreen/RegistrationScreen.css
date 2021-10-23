@@ -1,0 +1,29 @@
+.ctr-ls1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctr-ls2 {
+    width: 50%;
+}
+
+.centerOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 790px) {
+    .ctr-ls1 {
+        flex-direction: column;
+    }    
+    .ctr-ls {
+        height: auto;
+    }
+    .ctr-ls2 {
+        width: 70%;
+    }
+}
