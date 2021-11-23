@@ -3,8 +3,8 @@ import React, { FC, useState } from "react"
 import { Row, Col, Image, Form, Button, Container } from "react-bootstrap"
 import { useHistory } from "react-router"
 
-import Footer from "../../components/Footer"
-import Header from "../../components/Header"
+import Footer from "../../components/Footer/Footer"
+import Header from "../../components/Header/Header"
 
 import "./LoginScreen.css"
 import "../../index.css"

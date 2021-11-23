@@ -7,6 +7,7 @@ import WelcomeScreen from "./screens/WelcomeScreen"
 
 import "./index.css"
 import RegistrationScreen from "./screens/LoginScreen/RegistrationScreen"
+import HomeScreen from "./screens/HomeScreen/HomeScreen"
 
 const App: FC = () => {
     return (
@@ -14,6 +15,7 @@ const App: FC = () => {
             <Route path="/" component={WelcomeScreen} exact />
             <Route path="/login" component={LoginScreen} exact />
             <Route path="/register" component={RegistrationScreen} exact />
+            <Route path="/home" component={HomeScreen} exact />
         </Router>
     )
 }

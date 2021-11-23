@@ -1,0 +1,40 @@
+.sidebar-container {
+    display: flex;
+    width: 100%;
+    background-color: #ebebeb;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+}
+
+.sidebar-more {
+    padding: 5px;
+    font-size: 24px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+}
+
+.sidebar-more {
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+}
+
+.sidebar-more:hover {
+    color: #6264a7;
+}
+
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    justify-content: flex-end;
+}
