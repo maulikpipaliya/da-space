@@ -1,14 +1,15 @@
 import React, { FC } from 'react'
-import { ISidebarData } from './SidebarData'
+import { ISidebarData } from '../Data/SidebarData'
 import "./SidebarOption.css"
-
 
 interface SidebarProps {
     options: ISidebarData;
+    isActive: boolean;
 }
-export const SidebarOption : FC<SidebarProps> = ({options}) => {
+export const SidebarOption : FC<SidebarProps> = ({options, isActive}) => {
+    const classList = isActive?"sidebar-options active":"sidebar-options";
     return (
-        <div className="sidebar-options">
+        <div className={classList}>
             <div className="sidebar-icon">
                 {options.icon}
             </div>

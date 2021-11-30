@@ -1,6 +1,6 @@
 import React from "react"
 import "./Sidebar.css"
-import { SidebarBottom, SidebarData } from "./SidebarData"
+import { SidebarBottom, SidebarData } from "../Data/SidebarData"
 import { SidebarOption } from "./SidebarOption"
 
 const Sidebar = () => {
@@ -10,21 +10,31 @@ const Sidebar = () => {
     return (
         <div className="sidebar-container">
             <div className="sidebar-top">
-                <div>
-                    {topOptions.map((option) => {
-                        return (                                 
-                                <SidebarOption options={option} />
-                        )
-                    })}
-                </div>
-                <div className="sidebar-more">
-                    <i className="fi-rr-menu-dots"></i>
-                </div>
-                <div className="sidebar-bottom">
-                    {bottomOptions.map((option) => {
-                        return <SidebarOption options={option} />
-                    })}
-                </div>
+                {topOptions.map((option) => {
+                    return (
+                        <div>
+                            <SidebarOption
+                                options={option}
+                                isActive={
+                                    option.name === "Calls" ? true : false
+                                }
+                            />
+                        </div>
+                    )
+                })}
+            </div>
+            <div className="sidebar-more">
+                <i className="fi-rr-menu-dots" />
+            </div>
+            <div className="sidebar-bottom">
+                {bottomOptions.map((option) => {
+                    return (
+                        <SidebarOption
+                            options={option}
+                            isActive={option.name === "" ? true : false}
+                        />
+                    )
+                })}
             </div>
         </div>
     )

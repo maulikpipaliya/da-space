@@ -4,29 +4,27 @@
     background-color: #ebebeb;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     height: 100%;
     flex: 1;
+    padding: 0px;
+    margin-top: 0px;
+    z-index: -2;
 }
 
 .sidebar-more {
     padding: 5px;
     font-size: 24px;
-    margin-left: 50%;
+    margin-left: 55%;
     transform: translateX(-50%);
+    cursor: pointer;
 }
 
-.sidebar-top {
-    display: flex;
-    flex-direction: column;
-    flex: 6;
-}
-
-.sidebar-more {
+/* .sidebar-more {
     display: flex;
     flex: 1;
     cursor: pointer;
-}
+} */
 
 .sidebar-more:hover {
     color: #6264a7;
@@ -37,4 +35,5 @@
     flex-direction: column;
     flex: 4;
     justify-content: flex-end;
+    cursor: pointer;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
+import { LeftSide } from '../../components/LeftSide/LeftSide'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import "./HomeScreen.css"
 
@@ -12,7 +13,7 @@ const HomeScreen = () => {
                     <Sidebar />
                 </div>
                 <div className="home-leftside">
-                    This is left side
+                    <LeftSide />
                 </div>
                 <div className="home-rightside">
                     This is right side
