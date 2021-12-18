@@ -15,7 +15,15 @@ export const setUpExpressServer = () => {
     app.use(express.json())
 
     app.listen(envConfig.port, () => {
-        console.log(`server started at ${envConfig.serverURL}`)
+        console.log(`server started at ${envConfig.port}`)
     })
+
+    if (process.env.NODE_ENV === "production") {
+        app.use(express.static(path.join(__dirname, "/client/build")))
+        app.get("*", (req, res) =>
+            res.sendFile(path.resolve(__dirname, "/client/build/index.html"))
+        )
+    }
+
     return app
 }

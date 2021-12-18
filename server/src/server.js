@@ -1,9 +1,9 @@
-import { setUpExpressServer, connectToMongoDB } from "./config/index.js";
-import { setUpRoutes } from "./api/routes/index.js";
-import { envConfig } from "./config/globals.js";
+import { setUpExpressServer, connectToMongoDB } from "./config/index.js"
+import { setUpRoutes } from "./api/routes/index.js"
+import { envConfig } from "./config/globals.js"
 
-const app = setUpExpressServer();
+const app = setUpExpressServer()
 
-connectToMongoDB(envConfig.dbURL);
+connectToMongoDB(envConfig.dbURL)
 
-setUpRoutes(app);
+setUpRoutes(app)
