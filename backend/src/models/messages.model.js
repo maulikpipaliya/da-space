@@ -15,7 +15,7 @@ const messagesSchema = new mongoose.Schema({
     },
     read_by: [
         {
-            type: Schema.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: "User",
         },
     ],
@@ -35,5 +35,4 @@ const messagesSchema = new mongoose.Schema({
     deleted_at: Date,
 })
 
-const messagesModel = mongoose.model("Messages", messagesSchema)
-export default messagesModel
+export default messagesSchema

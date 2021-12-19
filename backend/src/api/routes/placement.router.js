@@ -1,12 +1,11 @@
 import { Router } from "express"
 
-import { sayHello } from "../controllers/placement.controller.js"
-const router = Router()
+import { helloPlacement } from "../controllers/placement.controller.js"
 
 const router = Router({
     mergeParams: true,
 })
 
-router.get("/", sayHello)
+router.get("/", helloPlacement)
 
 export default router

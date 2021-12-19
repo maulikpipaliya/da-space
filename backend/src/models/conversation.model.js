@@ -1,9 +1,11 @@
 import mongoose from "mongoose"
+import messagesModel from "./messages.model.js"
 
 const converstationSchema = new mongoose.Schema({
     name: String,
+    //[mongoose.Schema.Types.ObjectId],
     members: {
-        type: [{ type: Schema.Types.ObjectId, ref: "User" }],
+        type: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
         validate: [arrayLimit, "A conversation must have at least 2 members"],
     },
     /* type: {
@@ -11,6 +13,7 @@ const converstationSchema = new mongoose.Schema({
         enum: ["private", "group"],
         default: "private",
     }, */
+    messages: [messagesModel],
     created_at: {
         type: Date,
         default: Date.now,

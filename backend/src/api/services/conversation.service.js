@@ -1,9 +1,10 @@
-import Conversation from "../../models/conversation.model"
+import Conversation from "../../models/conversation.model.js"
 
 export default class ConversationService {
-    async getAllConversations(userName) {
+    async getAllConversations(userId) {
         return await Conversation.find({
-            "members.username": userName,
+            members: userId,
+            is_deleted: false,
         }).sort({ updated_at: -1 })
     }
 
@@ -12,8 +13,8 @@ export default class ConversationService {
     }
 
     async postMessage(conversationId, from, message, type) {
-        const conversation = await Conversation.findById(conversationId)
-        conversation.Messages.push({
+        const conversation = await Conversation.findById(conversationId)\
+        conversation.messages.push({
             from_id: from,
             msg_text: message,
             msg_type: type,
@@ -29,8 +30,8 @@ export default class ConversationService {
     async createConversation(members, name = "") {
         const newConversation = new Conversation({ members, name })
         try {
-            await newConversation.save()
-            return newConversation
+            const newConvo = await newConversation.save()
+            return newConvo
         } catch (error) {
             throw new Error(error.message)
         }
