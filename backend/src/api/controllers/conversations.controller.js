@@ -47,3 +47,16 @@ export const createConversation = async (req, res) => {
         res.status(409).json({ message: error.message })
     }
 }
+
+export const getReadStatus = async (req, res) => {
+    const { convoId: conversationId, messageId } = req.params
+    try {
+        const usersList = await new ConversationService().getReadStatus(
+            conversationId,
+            messageId
+        )
+        res.status(200).json(usersList)
+    } catch (error) {
+        res.status(409).json({ message: error.message })
+    }
+}

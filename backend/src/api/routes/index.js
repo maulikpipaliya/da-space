@@ -8,5 +8,5 @@ export const setUpRoutes = (app) => {
     app.use("/api", commonRouter)
     app.use("/auth", authRouter)
     app.use("/placements", placementRouter)
-    app.use("/converstion", conversationRouter)
+    app.use("/conversation", conversationRouter)
 }
