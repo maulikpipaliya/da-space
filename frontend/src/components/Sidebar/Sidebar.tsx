@@ -1,16 +1,22 @@
-import React from "react"
+import React, {useState} from "react"
 import "./Sidebar.css"
-import { SidebarBottom, SidebarData } from "../Data/SidebarData"
-import { SidebarOption } from "./SidebarOption"
+// import { SidebarBottom, SidebarData } from "../Data/SidebarData"
+// import { SidebarOption } from "./SidebarOption"
 
 const Sidebar = () => {
-    const topOptions = SidebarData
+    // const topOptions = SidebarData
     // const more = SidebarMore
-    const bottomOptions = SidebarBottom
+    // const bottomOptions = SidebarBottom
+
+    const [selectedTag, setSelectedTag] = useState("")
+
+    function bellHandler() {
+        setSelectedTag("")
+    }
 
     return (
         <div className="sidebar-container">
-            <div className="text-center">
+            <div className="text-center" onClick={bellHandler}>
                 <i className="fi-rr-bell"></i>
                 <p>Activity</p>
             </div>

@@ -21,7 +21,7 @@ export const ExamForm = () => {
 
     return (
         <>
-            <Container fluid={true} className=" h-94vh p-5">
+            <Container fluid={true} className="shadow3 h-94vh p-5">
                 <Row>
                     <Col
                         md={{ span: 6, offset: 3 }}

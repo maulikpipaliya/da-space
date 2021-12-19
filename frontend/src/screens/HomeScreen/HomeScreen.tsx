@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Header from "../../components/Header/Header"
 import { LeftSide } from "../../components/LeftSide/LeftSide"
@@ -8,6 +8,9 @@ import { PlacementForm } from "../PlacementForm/PlacementForm"
 import "./HomeScreen.css"
 
 const HomeScreen = () => {
+
+    
+
     return (
         <div className="home-container">
             <Header />
