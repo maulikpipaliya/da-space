@@ -3,6 +3,7 @@ import cors from "cors"
 import dotenv from "dotenv"
 import { envConfig } from "../globals.js"
 import path from "path"
+import bodyParser from "body-parser"
 
 export const setUpExpressServer = () => {
     const app = express()
@@ -14,6 +15,9 @@ export const setUpExpressServer = () => {
     //Middleware
 
     app.use(express.json())
+
+    app.use(bodyParser.json())
+    app.use(bodyParser.urlencoded({ extended: true }))
 
     app.listen(envConfig.port, () => {
         console.log(`server started at ${envConfig.port}`)
