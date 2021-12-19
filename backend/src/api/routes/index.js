@@ -4,6 +4,7 @@ import { errorHandler, notFound } from "../middlewares/error.middleware.js"
 
 export const setUpRoutes = (app) => {
     app.use("/", commonRouter)
+    app.use("/api", commonRouter)
     app.use("/auth", authRouter)
 
     app.use(notFound)
