@@ -3,6 +3,8 @@ import { setUpRoutes } from "./api/routes/index.js"
 import { envConfig } from "./config/globals.js"
 import bodyParser from "body-parser"
 import path from "path"
+import express from "express"
+import dotenv from "dotenv"
 
 connectToMongoDB(envConfig.dbURL)
 
