@@ -1,7 +1,10 @@
-import React from 'react'
-import Header from '../../components/Header/Header'
-import { LeftSide } from '../../components/LeftSide/LeftSide'
-import Sidebar from '../../components/Sidebar/Sidebar'
+import React from "react"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import Header from "../../components/Header/Header"
+import { LeftSide } from "../../components/LeftSide/LeftSide"
+import Sidebar from "../../components/Sidebar/Sidebar"
+import { ExamForm } from "../ExamForm/ExamForm"
+import { PlacementForm } from "../PlacementForm/PlacementForm"
 import "./HomeScreen.css"
 
 const HomeScreen = () => {
@@ -12,12 +15,18 @@ const HomeScreen = () => {
                 <div className="home-sidebar">
                     <Sidebar />
                 </div>
-                <div className="home-leftside">
-                    <LeftSide />
-                </div>
                 <div className="home-rightside">
-                    This is right side
+                    {/* <ExamForm /> */}
+                    <PlacementForm />
                 </div>
+                {/* <Router>
+                    <div className="home-leftside">
+                        <LeftSide />
+                    </div>
+                    <div className="home-rightside">
+                        <PlacementForm />
+                    </div>
+                </Router> */}
             </div>
         </div>
     )

@@ -24,16 +24,16 @@ export const CallsMenu: ICallsData[] = [
         name: "Contacts",
         icon: <i className="fi-rr-portrait"></i>
     },
-    {
-        id: 3,
-        name: "History",
-        icon: <i className="fi-rr-time-past"></i>
-    },
-    {
-        id: 4,
-        name: "Voicemail",
-        icon: <i className="fi-rr-microphone"></i>
-    },
+    // {
+    //     id: 3,
+    //     name: "History",
+    //     icon: <i className="fi-rr-time-past"></i>
+    // },
+    // {
+    //     id: 4,
+    //     name: "Voicemail",
+    //     icon: <i className="fi-rr-microphone"></i>
+    // },
 ]
 
 export const DialerList: ICallsDialer[] = [

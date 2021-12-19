@@ -26,7 +26,7 @@ const WelcomeScreen: FC = () => {
                         Welcome to DASpace
                         {text}
                     </div>
-                    <button onClick={clickHandler}>Haha</button>
+                    {/* <button onClick={clickHandler}>Haha</button> */}
                 </div>
             </div>
         </div>
