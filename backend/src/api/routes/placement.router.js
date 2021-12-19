@@ -1,12 +1,12 @@
-import { Router } from "express";
+import { Router } from "express"
 
-import { sayHello } from "../controllers/placement.controller.js";
-const router = Router();
+import { sayHello } from "../controllers/placement.controller.js"
+const router = Router()
 
 const router = Router({
     mergeParams: true,
 })
 
-router.get("/", sayHello);
+router.get("/", sayHello)
 
-export default router;
+export default router

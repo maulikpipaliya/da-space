@@ -1,12 +1,12 @@
-import { Router } from "express";
+import { Router } from "express"
 
-import { helloExam } from "../controllers/exam.controller.js";
-const router = Router();
+import { helloExam } from "../controllers/exam.controller.js"
+const router = Router()
 
 const router = Router({
     mergeParams: true,
 })
 
-router.get("/", helloExam);
+router.get("/", helloExam)
 
-export default router;
+export default router
