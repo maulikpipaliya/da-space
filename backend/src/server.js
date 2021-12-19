@@ -5,6 +5,7 @@ import bodyParser from "body-parser"
 import path from "path"
 import express from "express"
 import dotenv from "dotenv"
+import { errorHandler, notFound } from "./api/middlewares/error.middleware.js"
 
 connectToMongoDB(envConfig.dbURL)
 
@@ -42,3 +43,6 @@ if (process.env.NODE_ENV === "production") {
 app.listen(envConfig.port, () => {
     console.log(`server started at ${envConfig.port}`)
 })
+
+app.use(notFound)
+app.use(errorHandler)
