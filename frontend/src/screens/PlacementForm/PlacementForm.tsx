@@ -20,13 +20,13 @@ export const PlacementForm = () => {
 
     return (
         <>
-            <Container fluid={true} className="h-94vh p-5">
+            <Container fluid={true} className="shadow2 h-94vh p-5">
                 <Row>
                     <Col
                         md={{ span: 6, offset: 3 }}
                         xs={{ span: 8, offset: 2 }}
                     >
-                        <div className="shadow2 br-1 mainpadding text-center">
+                        <div className=" br-1 mainpadding text-center">
                             <div className="text-center">
                                 <Row className="p-3">
                                     <Col md={{ span: 12 }} className="my-1">

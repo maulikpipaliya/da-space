@@ -10,8 +10,32 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar-container">
-            <div className="sidebar-top">
-                {topOptions.map((option) => {
+            <div className="text-center">
+                <i className="fi-rr-bell"></i>
+                <p>Activity</p>
+            </div>
+            <div className="text-center">
+                <i className="fi-rr-comment"></i>
+                <p>Chat</p>
+            </div>
+            <div className="text-center">
+                <i className="fi-rr-user"></i>
+                <p>Teams</p>
+            </div>
+            <div className="text-center">
+                <i className="fi-rr-briefcase"></i>
+                <p>Placements</p>
+            </div>
+            <div className="text-center">
+                <i className="fi-rr-test"></i>
+                <p>Exam</p>
+            </div>
+            <div className="text-center">
+                <i className="fi-rr-headset"></i>
+                <p>Calls</p>
+            </div>
+
+            {/* {topOptions.map((option) => {
                     return (
                         <div>
                             <SidebarOption
@@ -22,12 +46,11 @@ const Sidebar = () => {
                             />
                         </div>
                     )
-                })}
-            </div>
+                })} */}
             {/* <div className="sidebar-more">
                 <i className="fi-rr-menu-dots" />
             </div> */}
-            <div className="sidebar-bottom">
+            {/* <div className="sidebar-bottom">
                 {bottomOptions.map((option) => {
                     return (
                         <SidebarOption
@@ -36,7 +59,7 @@ const Sidebar = () => {
                         />
                     )
                 })}
-            </div>
+            </div> */}
         </div>
     )
 }
