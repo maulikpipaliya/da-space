@@ -8,6 +8,7 @@ import WelcomeScreen from "./screens/WelcomeScreen"
 import "./index.css"
 import RegistrationScreen from "./screens/LoginScreen/RegistrationScreen"
 import HomeScreen from "./screens/HomeScreen/HomeScreen"
+import { ExamForm } from "./screens/ExamForm/ExamForm"
 
 const App: FC = () => {
     return (

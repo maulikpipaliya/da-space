@@ -24,11 +24,16 @@ export const SidebarData: ISidebarData[] = [
     },
     {
         id: 4,
-        name: "Assignments",
-        icon: <i className="fi-rr-backpack"></i>,
+        name: "Placements",
+        icon: <i className="fi-rr-briefcase"></i>,
     },
     {
         id: 5,
+        name: "Exam",
+        icon: <i className="fi-rr-test"></i>,
+    },
+    {
+        id: 6,
         name: "Calls",
         icon: <i className="fi-rr-headset"></i>,
     },

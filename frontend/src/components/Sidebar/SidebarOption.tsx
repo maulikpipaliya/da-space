@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { ISidebarData } from '../Data/SidebarData'
 import "./SidebarOption.css"
 
@@ -7,6 +7,7 @@ interface SidebarProps {
     isActive: boolean;
 }
 export const SidebarOption : FC<SidebarProps> = ({options, isActive}) => {
+
     const classList = isActive?"sidebar-options active":"sidebar-options";
     return (
         <div className={classList}>

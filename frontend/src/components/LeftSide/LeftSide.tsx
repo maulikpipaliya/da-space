@@ -28,7 +28,7 @@ export const LeftSide = () => {
             <div className="leftside-dialer">
                 <label className="dialer-label">Make a Call</label>
                 <div className="leftside-dialer-search">
-                    <input type="text" placeholder="Type a name" />
+                    <input type="text" placeholder="Enter a Name"/>
                 </div>
                 <div className="leftside-dialer-suggested">
                     <label className="suggested-label">Suggested</label>

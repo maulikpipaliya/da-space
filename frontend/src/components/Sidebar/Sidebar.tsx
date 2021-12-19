@@ -7,6 +7,7 @@ const Sidebar = () => {
     const topOptions = SidebarData
     // const more = SidebarMore
     const bottomOptions = SidebarBottom
+
     return (
         <div className="sidebar-container">
             <div className="sidebar-top">
@@ -16,16 +17,16 @@ const Sidebar = () => {
                             <SidebarOption
                                 options={option}
                                 isActive={
-                                    option.name === "Calls" ? true : false
+                                    option.id === 4 ? true : false
                                 }
                             />
                         </div>
                     )
                 })}
             </div>
-            <div className="sidebar-more">
+            {/* <div className="sidebar-more">
                 <i className="fi-rr-menu-dots" />
-            </div>
+            </div> */}
             <div className="sidebar-bottom">
                 {bottomOptions.map((option) => {
                     return (
