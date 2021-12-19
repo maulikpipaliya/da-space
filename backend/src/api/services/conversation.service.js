@@ -1,5 +1,6 @@
 import Conversation from "../../models/conversation.model.js"
 import Users from "../../models/user.model.js"
+import Poll from "../../models/poll.model.js"
 
 export default class ConversationService {
     async getAllConversations(userId) {
@@ -65,5 +66,72 @@ export default class ConversationService {
         } catch (error) {
             throw new Error(error.message)
         }
+    }
+
+    async createPoll(
+        title,
+        slug,
+        summary,
+        start_at,
+        ends_at,
+        conversationId,
+        question_text,
+        options
+    ) {
+        const conversation = await Conversation.findById(conversationId)
+        const newPoll = {
+            title,
+            slug,
+            summary,
+            start_at,
+            ends_at,
+            question_text,
+            options,
+        }
+        const newPollObj = new Poll(newPoll)
+        const savedPoll = await newPollObj.save()
+        return this.postMessage(
+            conversationId,
+            "61bf8af06017de30ebb418e0",
+            savedPoll._id,
+            "poll"
+        )
+    }
+
+    async votePoll(pollId, option_text) {
+        const poll = await Poll.findById(pollId)
+        // check if user has already voted for an option
+        const userId = "61bf8af06017de30ebb418e0"
+        const index = 0
+        for (let i = 0; i < poll.options.length; i++) {
+            if (poll.options[i].option_text === option_text) {
+                index = i
+            }
+            if (poll.options[i].votes.includes(userId)) {
+                return "You have already voted for this option"
+            }
+        }
+        // vote for the option
+        poll.options[index].votes.push(userId)
+        poll.save()
+        return "You have successfully voted for this option"
+    }
+
+    async getVotes(pollId) {
+        const poll = await Poll.findById(pollId)
+        // get votes for each option and return there names
+        const votes = []
+        for (let i = 0; i < poll.options.length; i++) {
+            const voters = { text: poll.options[i].option_text, votes: [] }
+            for (let j = 0; j < poll.options[i].votes.length; j++) {
+                const user = await Users.findById(poll.options[i].votes[j])
+                voters["votes"].push({
+                    id: poll.options[i].votes[j],
+                    name: user.firstName,
+                })
+            }
+            votes.push(voters)
+        }
+        return votes
     }
 }

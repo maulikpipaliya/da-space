@@ -60,3 +60,48 @@ export const getReadStatus = async (req, res) => {
         res.status(409).json({ message: error.message })
     }
 }
+
+export const createPoll = async (req, res) => {
+    const { title, slug, summary, start_at, ends_at, question_text, options } =
+        req.body
+    const { convoId } = req.params
+    try {
+        const newPoll = await new ConversationService().createPoll(
+            title,
+            slug,
+            summary,
+            start_at,
+            ends_at,
+            convoId,
+            question_text,
+            options
+        )
+        res.status(201).json(newPoll)
+    } catch (error) {
+        res.status(409).json({ message: error.message })
+    }
+}
+
+export const votePoll = async (req, res) => {
+    const { pollId } = req.params
+    const { option } = req.body
+    try {
+        const updatedPoll = await new ConversationService().votePoll(
+            pollId,
+            option
+        )
+        res.json(updatedPoll)
+    } catch (error) {
+        res.status(409).json({ message: error.message })
+    }
+}
+
+export const getVotes = async (req, res) => {
+    const { pollId } = req.params
+    try {
+        const votes = await new ConversationService().getVotes(pollId)
+        res.json(votes)
+    } catch (error) {
+        res.status(409).json({ message: error.message })
+    }
+}
