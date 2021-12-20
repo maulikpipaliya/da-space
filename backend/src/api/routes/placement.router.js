@@ -1,6 +1,6 @@
 import { Router } from "express"
 
-import { helloPlacement } from "../controllers/placement.controller.js"
+import { helloPlacement, addPlacement } from "../controllers/placement.controller.js"
 
 const router = Router({
     mergeParams: true,

@@ -1,4 +1,4 @@
-import placementModel from "../../models/placement.model"
+import placementModel from "../../models/placement.model.js"
 
 
 export default class placementService{

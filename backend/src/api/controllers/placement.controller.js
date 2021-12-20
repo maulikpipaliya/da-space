@@ -1,5 +1,5 @@
 import asyncHandler from "express-async-handler"
-import placementService from "../services/placement.service"
+import placementService from "../services/placement.service.js"
 
 export const helloPlacement = asyncHandler(async (req, res) => {
     res.status(200).send({
@@ -7,14 +7,12 @@ export const helloPlacement = asyncHandler(async (req, res) => {
         message: "Welcome to Placement APIs",
     })
 })
- 
-const addCompany = asyncHandler(async (req, res) => {
+
+export const addPlacement = asyncHandler(async (req, res) => {
     try {
         const newUser = await new placementService().addPlacement
-            req.body.companyName,
-            req.body.job
-            req.body.
-     res.status(201).json({
+        req.body.companyName, req.body.job
+        req.body.res.status(201).json({
             success: true,
             message: newUser,
         })

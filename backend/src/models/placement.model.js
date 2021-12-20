@@ -65,31 +65,24 @@ const placementSchema = new mongoose.Schema({
     // lastLogin: {
     //     type: Date,
     // },
-    companyName:
-    {
-        type:String,
+    companyName: {
+        type: String,
     },
-    jobProfile:
-    {
-        type:String
+    jobProfile: {
+        type: String,
     },
-    yearOfDrive:
-    {
-        type:String
+    yearOfDrive: {
+        type: String,
     },
-    roundNameX:
-    {
-        type:String,
+    roundNameX: {
+        type: String,
     },
-    roundNameY:
-    {
-        type:String,
+    roundNameY: {
+        type: String,
     },
-    roundNameXDescriptioconst:
-    {
-     type:String,
-    }
-
+    roundNameXDescriptioconst: {
+        type: String,
+    },
 })
 
 //Don’t use arrow functions when you use Mongoose (Schema.methods)
@@ -105,5 +98,5 @@ const placementSchema = new mongoose.Schema({
 //     this.password = await bcrypt.hash(this.password, salt)
 // })
 
-const userModel = mongoose.model("User", placementSchema)
-export default userModel
+const placementModel = mongoose.model("Placement", placementSchema)
+export default placementModel
