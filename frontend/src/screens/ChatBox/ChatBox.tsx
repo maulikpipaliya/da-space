@@ -160,21 +160,32 @@ const ChatBox = () => {
                                             Type a new message
                                         </label>
                                         <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl">
-                                            <input
+                                            {/* <input
                                                 aria-invalid="false"
                                                 name="message"
                                                 type="text"
                                                 className="MuiInputBase-input MuiOutlinedInput-input"
                                                 value=""
-                                            />
+                                            /> */}
+                                            <div className="input-icons">
+                                                <i className="fi-rr-paper-plane icon"></i>
+                                                <input
+                                                    type="text"
+                                                    className="w-100"
+                                                    id="message"
+                                                />
+                                                {/* <div className="send-btn">
+                                            </div> */}
+                                            </div>
+
                                             <fieldset
                                                 aria-hidden="true"
                                                 className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
                                             >
-                                                <legend className="PrivateNotchedOutline-legendLabelled-3">
-                                                    <span>
+                                                <legend className="PrivateNotchedOutline-legendLabelled-3 pt-1">
+                                                    <span className="fs-6">
                                                         <i className="fi-rr-link p-1"></i>
-                                                        <i className="fi-rr-chart-histogram p-1"></i>
+                                                        <i className="fi-rr-chart-histogram p-2"></i>
                                                     </span>
                                                 </legend>
                                             </fieldset>

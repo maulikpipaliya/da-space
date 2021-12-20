@@ -24,7 +24,7 @@ const App: FC = () => {
             <Route path="/home" component={HomeScreen} exact />
             <Route path="/exam" component={ExamScreen} exact />
             <Route path="/chat" component={ChatScreen} exact />
-            <Route path="/profile" component={MyProfile} exact />
+            <Route path="/myprofile" component={MyProfile} exact />
             <Route path="/placement" component={PlacementScreen} exact />
         </Router>
     )

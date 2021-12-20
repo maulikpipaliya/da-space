@@ -372,3 +372,14 @@
 .chatroom-ctr{
     width: 75vw;
 }
+
+.input-icons i {
+    position: absolute;
+}
+
+.icon {
+    padding: 6px;
+    min-width: 40px;
+    left: 97%;
+    transform: translateX(-30%);
+}

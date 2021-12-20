@@ -50,7 +50,7 @@ export const ExamForm = () => {
                                             <Form.Control
                                                 type="text"
                                                 className="br-1 p-fileds"
-                                                placeholder="Subject Type"
+                                                placeholder="Exam Name (Mid / Final)"
                                                 id="displayname"
                                             />
                                         </Form.Group>
@@ -68,46 +68,20 @@ export const ExamForm = () => {
                                             />
                                         </Form.Group>
                                     </Col>
-                                    {/* <Col md={{ span: 6 }} className="my-1">
-                                    <Form.Group>
-                                        <Form.Control
-                                            type={
-                                                !passwordVisible
-                                                    ? "password"
-                                                    : "text"
-                                            }
-                                            className="br-1 p-fileds"
-                                            placeholder="Password"
-                                            id="password"
-                                        />
-                                        <span>
-                                            <i
-                                                className={
-                                                    "fa hidden " +
-                                                    (passwordVisible
-                                                        ? "fa-eye"
-                                                        : "fa-eye-slash") +
-                                                    " eyeclassRegistration"
-                                                }
-                                                aria-hidden="true"
-                                                onClick={changeEye}
-                                            ></i>
-                                        </span>
-                                    </Form.Group>
-                                </Col>
-                                <Col
-                                    md={{ span: 6 }}
-                                    className="my-1 pb-3"
-                                >
-                                    <Form.Group>
-                                        <Form.Control
-                                            type="text"
-                                            className="br-1 p-fileds"
-                                            placeholder="Confirm Password"
-                                            id="confirmpassword"
-                                        />
-                                    </Form.Group>
-                                </Col> */}
+                                    <Col
+                                        md={{ span: 12 }}
+                                        className="my-1 pb-3"
+                                    >
+                                        <Form.Group>
+                                            <Form.Control
+                                                as="textarea"
+                                                rows={2}
+                                                className="br-1 p-fileds"
+                                                placeholder="Exam Notes"
+                                                id="contactno"
+                                            />
+                                        </Form.Group>
+                                    </Col>
                                     <Col
                                         md={{ span: 12 }}
                                         className="my-1 pb-3"
