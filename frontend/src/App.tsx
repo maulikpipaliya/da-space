@@ -9,6 +9,7 @@ import "./index.css"
 import RegistrationScreen from "./screens/LoginScreen/RegistrationScreen"
 import HomeScreen from "./screens/HomeScreen/HomeScreen"
 import { ExamForm } from "./screens/ExamForm/ExamForm"
+import ChatApp from "./screens/ChatBox/ChatApp"
 
 const App: FC = () => {
     return (
@@ -17,6 +18,7 @@ const App: FC = () => {
             <Route path="/login" component={LoginScreen} exact />
             <Route path="/register" component={RegistrationScreen} exact />
             <Route path="/home" component={HomeScreen} exact />
+            {/* <Route path="/chat" component={ChatApp} exact /> */}
         </Router>
     )
 }
