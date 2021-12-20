@@ -10,15 +10,15 @@
     height: 94vh;
 }
 
-.home-sidebar {
+/* .home-sidebar {
     display: flex;
     flex: 1;
-}
+} */
 
-.home-leftside {
+/* .home-leftside {
     display: flex;
     flex: 3;
-}
+} */
 
 .home-rightside {
     display: flex;

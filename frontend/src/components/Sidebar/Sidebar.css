@@ -15,6 +15,14 @@
     cursor: pointer;
 }
 
+.active{
+    color: #0c4ca3;
+}
+
+button {
+    border: none;
+}
+
 /* 
 .sidebar-more {
     padding: 5px;

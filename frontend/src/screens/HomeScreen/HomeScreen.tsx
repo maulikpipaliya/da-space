@@ -9,8 +9,6 @@ import "./HomeScreen.css"
 
 const HomeScreen = () => {
 
-    
-
     return (
         <div className="home-container">
             <Header />
