@@ -7,5 +7,7 @@ const router = Router({
 })
 
 router.get("/", helloPlacement)
+router.post("/addPlacement", addPlacement)
+
 
 export default router
