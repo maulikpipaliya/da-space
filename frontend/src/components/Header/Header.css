@@ -69,6 +69,10 @@
 
 .header-avatar {
     height: 40px;
+    border: 1px solid #ffffff; 
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .header-options {

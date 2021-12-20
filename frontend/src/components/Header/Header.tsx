@@ -18,7 +18,10 @@ const Header = () => {
                 <div className="header-options">
                     <i className="fi-rr-menu-dots"></i>
                 </div>
-                <img className="header-avatar" src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1638257833~hmac=e1788c23ce83f8d394de8dfca8fcb42f" alt="None" />
+                {/* <img className="header-avatar" src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1638257833~hmac=e1788c23ce83f8d394de8dfca8fcb42f" alt="None" /> */}
+                <div className="header-avatar">
+                    <i className="fi-rr-user"></i>
+                </div>
             </div>
         </div>
     </div>
