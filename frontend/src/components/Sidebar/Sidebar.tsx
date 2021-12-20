@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { useHistory } from "react-router"
 import { setScreenView } from "../../actions/UIAction"
 import { RootState } from "../../store"
 import "./Sidebar.css"
@@ -12,6 +13,7 @@ const Sidebar = () => {
     // const bottomOptions = SidebarBottom
 
     const dispatch = useDispatch()
+    const history = useHistory()
 
     const screenState = useSelector((state: RootState) => state.uiState)
 
@@ -27,13 +29,15 @@ const Sidebar = () => {
 
         switch (tabText) {
             case "exam":
-                console.log("examaa")
+                history.push("/exam")
                 dispatch(setScreenView("exam"))
                 break
             case "chat":
+                history.push("/chat")
                 dispatch(setScreenView("chat"))
                 break
             case "placement":
+                history.push("/placement")
                 setScreenView("placement")
                 break
             default:

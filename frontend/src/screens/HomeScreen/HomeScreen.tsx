@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react"
+import React, { FC, useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import {
     BrowserRouter as Router,
     Route,
     Switch,
     useHistory,
+    useLocation,
     useParams,
 } from "react-router-dom"
 import Header from "../../components/Header/Header"
@@ -17,26 +18,36 @@ import { ExamForm } from "../ExamForm/ExamForm"
 import { PlacementForm } from "../PlacementForm/PlacementForm"
 import "./HomeScreen.css"
 
-const HomeScreen = () => {
+interface IHomeScreenProps {
+    match: any
+}
+
+function useQuery() {
+    const { search } = useLocation()
+    return React.useMemo(() => new URLSearchParams(search), [search])
+}
+
+const HomeScreen: FC<IHomeScreenProps> = ({ match }) => {
     const screenState = useSelector((state: RootState) => state.uiState)
 
     const histroy = useHistory()
 
-    const params = useParams()
+    const location = useQuery()
 
-    console.log("params")
-    console.log(params)
+    console.log(location.get("view"))
 
     const screenName = screenState?.data?.screenName
 
     console.log(screenName)
 
-    const [screenViewName, setScreenViewName] = useState(screenName)
+    const [screenViewName, setScreenViewName] = useState(location.get("view"))
 
     useEffect(() => {
+        // console.log("screenViewName")
+        // console.log(screenViewName)
         setScreenViewName(screenState.data.screenName)
         return () => {}
-    }, [screenState])
+    }, [])
 
     return (
         <div className="home-container">

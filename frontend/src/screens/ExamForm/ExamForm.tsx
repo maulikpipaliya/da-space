@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import "./ExamForm.css"
 
 import {
@@ -12,7 +12,6 @@ import {
 } from "react-bootstrap"
 
 export const ExamForm = () => {
-
     const [passwordVisible, setPasswordVisible] = useState(false)
 
     const changeEye = () => {
