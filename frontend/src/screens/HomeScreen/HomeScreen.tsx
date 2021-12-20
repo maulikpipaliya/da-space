@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    useHistory,
+    useParams,
+} from "react-router-dom"
 import Header from "../../components/Header/Header"
 import { LeftSide } from "../../components/LeftSide/LeftSide"
 import Sidebar from "../../components/Sidebar/Sidebar"
@@ -12,6 +18,13 @@ import "./HomeScreen.css"
 
 const HomeScreen = () => {
     const screenState = useSelector((state: RootState) => state.uiState)
+
+    const histroy = useHistory()
+
+    const params = useParams()
+
+    console.log("params")
+    console.log(params)
 
     const screenName = screenState?.data?.screenName
 
