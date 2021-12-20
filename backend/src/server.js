@@ -24,11 +24,10 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 setUpRoutes(app)
 
-const __dirname = path.resolve()
-console.log("__dirname")
-console.log(__dirname)
-
 if (process.env.NODE_ENV === "production") {
+    const __dirname = path.resolve()
+    // console.log("__dirname")
+    // console.log(__dirname)
     app.use(express.static(path.join(__dirname, "/frontend/build")))
 
     app.get("*", (req, res) =>

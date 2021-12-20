@@ -1,8 +1,9 @@
-import { Router } from "express";
+import { Router } from "express"
 
-import { sayHello } from "../controllers/common.controller.js";
-const router = Router();
+import { sayHello, registration } from "../controllers/common.controller.js"
+const router = Router()
 
-router.get("/", sayHello);
+router.get("/", sayHello)
+router.post("/register", registration)
 
-export default router;
+export default router

@@ -23,11 +23,10 @@ export const setUpExpressServer = () => {
         console.log(`server started at ${envConfig.port}`)
     })
 
-    const __dirname = path.resolve()
-    console.log("__dirname")
-    console.log(__dirname)
-
     if (process.env.NODE_ENV === "production") {
+        const __dirname = path.resolve()
+        // console.log("__dirname")
+        // console.log(__dirname)
         app.use(express.static(path.join(__dirname, "/frontend/build")))
 
         app.get("*", (req, res) =>
