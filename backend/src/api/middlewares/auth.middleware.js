@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"
 
-const auth = async (req, res, next) => {
+const isLoggedIn = async (req, res, next) => {
     try {
         next()
         /*  const token = req.headers.authorization?.split(" ")[1]
@@ -21,4 +21,4 @@ const auth = async (req, res, next) => {
     }
 }
 
-export default auth
+export default isLoggedIn

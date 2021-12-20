@@ -5,4 +5,7 @@ import userModel from "../../models/user.model.js"
 
 import { Strategy as LocalStrategy } from "passport-local"
 
-export const authUser = asyncHandler(async (req, res, next) => {})
+export const authUser = asyncHandler(async (req, res, next) => {
+
+    
+})

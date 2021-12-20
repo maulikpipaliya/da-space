@@ -1,14 +1,42 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import { useSelector } from "react-redux"
+import { useHistory, useLocation } from "react-router"
 import Header from "../../components/Header/Header"
 import Sidebar from "../../components/Sidebar/Sidebar"
+import { RootState } from "../../store"
 import "../HomeScreen/HomeScreen.css"
 
+function useQuery() {
+    const { search } = useLocation()
+    return React.useMemo(() => new URLSearchParams(search), [search])
+}
+
 const MyProfile = () => {
+    const screenState = useSelector((state: RootState) => state.uiState)
+
+    const location = useQuery()
+
+    console.log(location.get("view"))
+
+    const screenName = screenState?.data?.screenName
+
+    console.log(screenName)
+
+    const [screenViewName, setScreenViewName] = useState(location.get("view"))
+
+    useEffect(() => {
+        // console.log("screenViewName")
+        // console.log(screenViewName)
+        setScreenViewName(screenState.data.screenName)
+        return () => {}
+    }, [])
     return (
         <div className="home-container">
             <Header />
             <div className="home-body">
-                <Sidebar />
+                <div className="home-sidebar">
+                    <Sidebar />
+                </div>
                 <div className="home-main home-rightside">
                     {/* Edit Profile Here */}
                     <div className="col-md-9 personal-info container">
@@ -38,7 +66,7 @@ const MyProfile = () => {
                                         value="Bishop"
                                     />
                                 </div>
-                            </div>    
+                            </div>
                             <div className="form-group mt-2">
                                 <label className="col-lg-3 control-label">
                                     Email:

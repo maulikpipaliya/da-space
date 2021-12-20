@@ -6,6 +6,11 @@ import path from "path"
 import express from "express"
 import dotenv from "dotenv"
 import { errorHandler, notFound } from "./api/middlewares/error.middleware.js"
+import session from "express-session"
+import passport from "passport"
+import cors from "cors"
+
+import "../../backend/src/api/middlewares/passport.middleware.js"
 
 connectToMongoDB(envConfig.dbURL)
 
@@ -13,7 +18,7 @@ const app = express()
 
 dotenv.config()
 
-// app.use(cors({ origin: envConfig.corsOrigin }))
+app.use(cors())
 
 //Middleware
 
@@ -38,6 +43,15 @@ if (process.env.NODE_ENV === "production") {
         res.send("API is running....")
     })
 }
+
+app.use(
+    session({
+        secret: "your secret line of secretness",
+    })
+)
+
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.listen(envConfig.port, () => {
     console.log(`server started at ${envConfig.port}`)

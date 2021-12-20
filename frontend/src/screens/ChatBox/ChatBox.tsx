@@ -69,6 +69,116 @@ const ChatBox = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="createChatModal">
+                            <div
+                                className="modal-wrapper"
+                                style={{
+                                    transform: "translateY(0vh)",
+                                    opacity: "1",
+                                }}
+                            >
+                                <div className="modal-header">
+                                    <h4>New Chat</h4>
+                                    <span className="close-modal-btn">×</span>
+                                </div>
+                                <div className="modal-body">
+                                    <h6>Select Participants</h6>
+                                    <div className="basic-multi-select css-2b097c-container">
+                                        <span
+                                            aria-live="polite"
+                                            aria-atomic="false"
+                                            aria-relevant="additions text"
+                                            className="css-1f43avz-a11yText-A11yText"
+                                        ></span>
+                                        <div className="select__control css-yk16xz-control">
+                                            <div className="select__value-container select__value-container--is-multi css-g1d714-ValueContainer">
+                                                <div className="select__placeholder css-1wa3eu0-placeholder">
+                                                    Select...
+                                                </div>
+                                                <div className="css-b8ldur-Input">
+                                                    <div
+                                                        className="select__input"
+                                                        style={{
+                                                            display:
+                                                                "inline-block",
+                                                        }}
+                                                    >
+                                                        <input
+                                                            id="react-select-2-input"
+                                                            tabIndex={0}
+                                                            type="text"
+                                                            aria-autocomplete="list"
+                                                            value=""
+                                                            style={{
+                                                                boxSizing:
+                                                                    "content-box",
+                                                                width: "2px",
+                                                                background:
+                                                                    "0px center",
+                                                                border: "0px",
+                                                                fontSize:
+                                                                    "inherit",
+                                                                opacity: "1",
+                                                                outline: "0px",
+                                                                padding: "0px",
+                                                                color: "inherit",
+                                                            }}
+                                                        />
+                                                        <div
+                                                            style={{
+                                                                position:
+                                                                    "absolute",
+                                                                top: "0px",
+                                                                left: "0px",
+                                                                visibility:
+                                                                    "hidden",
+                                                                height: "0px",
+                                                                overflow:
+                                                                    "scroll",
+                                                                whiteSpace:
+                                                                    "pre",
+                                                                fontSize:
+                                                                    "16px",
+                                                                fontWeight: 400,
+                                                                fontStyle:
+                                                                    "normal",
+                                                                letterSpacing:
+                                                                    "normal",
+                                                                textTransform:
+                                                                    "none",
+                                                            }}
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="select__indicators css-1hb7zxy-IndicatorsContainer">
+                                                <span className="select__indicator-separator css-1okebmr-indicatorSeparator"></span>
+                                                <div
+                                                    className="select__indicator select__dropdown-indicator css-tlfecz-indicatorContainer"
+                                                    aria-hidden="true"
+                                                >
+                                                    <svg
+                                                        height="20"
+                                                        width="20"
+                                                        viewBox="0 0 20 20"
+                                                        aria-hidden="true"
+                                                        focusable="false"
+                                                        className="css-tj5bde-Svg"
+                                                    >
+                                                        <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="modal-footer">
+                                    <button className="btn-continue">
+                                        CONTINUE
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="chatroom-ctr">

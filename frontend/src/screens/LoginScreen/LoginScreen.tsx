@@ -71,9 +71,11 @@ const LoginScreen: FC = () => {
                                 Login
                             </Button>
 
+                            <Button className="w-100 my-2 p-3 bg-da-blue br-1">
+                                Sign In With Google
+                            </Button>
                             <span className="my-2 p-2">
-                                No account ?{" "}
-                                <Link to="register">Register</Link>
+                                No account ? <Link to="register">Register</Link>
                             </span>
                         </Form>
                     </div>

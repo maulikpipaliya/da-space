@@ -7,8 +7,6 @@ import RegistrationScreen from "./screens/LoginScreen/RegistrationScreen"
 import HomeScreen from "./screens/HomeScreen/HomeScreen"
 import ExamScreen from "./screens/ExamScreen/ExamScreen"
 import ChatScreen from "./screens/ChatScreen/ChatScreen"
-import { ExamForm } from "./screens/ExamForm/ExamForm"
-import ChatApp from "./screens/ChatBox/ChatApp"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./index.css"

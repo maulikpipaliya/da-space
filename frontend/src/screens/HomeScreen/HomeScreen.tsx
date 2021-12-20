@@ -9,13 +9,13 @@ import {
     useParams,
 } from "react-router-dom"
 import Header from "../../components/Header/Header"
-import { LeftSide } from "../../components/LeftSide/LeftSide"
+
 import Sidebar from "../../components/Sidebar/Sidebar"
 import { RootState } from "../../store"
-import ChatApp from "../ChatBox/ChatApp"
+
 import ChatBox from "../ChatBox/ChatBox"
 import { ExamForm } from "../ExamForm/ExamForm"
-import { PlacementForm } from "../PlacementForm/PlacementForm"
+
 import PlacementBox from "../PlacementScreen/PlacementScreen"
 import "./HomeScreen.css"
 
