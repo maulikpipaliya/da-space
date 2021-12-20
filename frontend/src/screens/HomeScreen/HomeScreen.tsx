@@ -16,6 +16,7 @@ import ChatApp from "../ChatBox/ChatApp"
 import ChatBox from "../ChatBox/ChatBox"
 import { ExamForm } from "../ExamForm/ExamForm"
 import { PlacementForm } from "../PlacementForm/PlacementForm"
+import PlacementBox from "../PlacementScreen/PlacementScreen"
 import "./HomeScreen.css"
 
 interface IHomeScreenProps {
@@ -58,9 +59,10 @@ const HomeScreen: FC<IHomeScreenProps> = ({ match }) => {
                 </div>
 
                 <div className="home-main home-rightside">
-                    <ChatBox />
+                    {/* <ChatBox /> */}
                     {screenViewName === "chat" && <ChatBox />}
                     {screenViewName === "exam" && <ExamForm />}
+                    {screenViewName === "placement" && <PlacementBox />}
 
                     {/* <PlacementForm /> */}
                 </div>

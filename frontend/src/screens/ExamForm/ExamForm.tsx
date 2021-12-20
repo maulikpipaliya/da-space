@@ -63,7 +63,7 @@ export const ExamForm = () => {
                                             <Form.Control
                                                 type="number"
                                                 className="br-1 p-fileds"
-                                                placeholder="Year of Drive"
+                                                placeholder="Year of Exam"
                                                 id="yearofjoining"
                                             />
                                         </Form.Group>

@@ -13,6 +13,7 @@ import ChatApp from "./screens/ChatBox/ChatApp"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./index.css"
 import MyProfile from "./screens/MyProfile/MyProfile"
+import PlacementScreen from "./screens/PlacementScreen/PlacementScreen"
 
 const App: FC = () => {
     return (
@@ -24,6 +25,7 @@ const App: FC = () => {
             <Route path="/exam" component={ExamScreen} exact />
             <Route path="/chat" component={ChatScreen} exact />
             <Route path="/profile" component={MyProfile} exact />
+            <Route path="/placement" component={PlacementScreen} exact />
         </Router>
     )
 }

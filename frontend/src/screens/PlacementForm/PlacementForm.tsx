@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from "react"
 import {
     Row,
     Col,
@@ -11,7 +11,6 @@ import {
 import "./PlacementForm.css"
 
 export const PlacementForm = () => {
-
     const [passwordVisible, setPasswordVisible] = useState(false)
 
     const changeEye = () => {
@@ -20,7 +19,7 @@ export const PlacementForm = () => {
 
     return (
         <>
-            <Container fluid={true} className="shadow3 h-94vh p-5">
+            <Container fluid={true} className="shadow3 h-94vh p-5 h-100">
                 <Row>
                     <Col
                         md={{ span: 6, offset: 3 }}
@@ -42,17 +41,23 @@ export const PlacementForm = () => {
                                             </span>
                                         </Form.Group>
                                     </Col>
-                                    <Col md={{ span: 12 }} className="my-1 pb-3">
+                                    <Col
+                                        md={{ span: 12 }}
+                                        className="my-1 pb-3"
+                                    >
                                         <Form.Group>
                                             <Form.Control
                                                 type="text"
                                                 className="br-1 p-fileds"
-                                                placeholder="Student Name"
+                                                placeholder="Job Profile"
                                                 id="displayname"
                                             />
                                         </Form.Group>
                                     </Col>
-                                    <Col md={{ span: 12 }} className="my-1 pb-3">
+                                    <Col
+                                        md={{ span: 12 }}
+                                        className="my-1 pb-3"
+                                    >
                                         <Form.Group>
                                             <Form.Control
                                                 type="number"
@@ -60,33 +65,6 @@ export const PlacementForm = () => {
                                                 placeholder="Year of Drive"
                                                 id="yearofjoining"
                                             />
-                                        </Form.Group>
-                                    </Col>
-                                    {/* <Col md={{ span: 6 }} className="my-1">
-                                        <Form.Group>
-                                            <Form.Control
-                                                type={
-                                                    !passwordVisible
-                                                        ? "password"
-                                                        : "text"
-                                                }
-                                                className="br-1 p-fileds"
-                                                placeholder="Password"
-                                                id="password"
-                                            />
-                                            <span>
-                                                <i
-                                                    className={
-                                                        "fa hidden " +
-                                                        (passwordVisible
-                                                            ? "fa-eye"
-                                                            : "fa-eye-slash") +
-                                                        " eyeclassRegistration"
-                                                    }
-                                                    aria-hidden="true"
-                                                    onClick={changeEye}
-                                                ></i>
-                                            </span>
                                         </Form.Group>
                                     </Col>
                                     <Col
@@ -97,20 +75,20 @@ export const PlacementForm = () => {
                                             <Form.Control
                                                 type="text"
                                                 className="br-1 p-fileds"
-                                                placeholder="Confirm Password"
-                                                id="confirmpassword"
+                                                placeholder="Round Name X"
+                                                id="contactno"
                                             />
                                         </Form.Group>
-                                    </Col> */}
+                                    </Col>
                                     <Col
-                                        md={{ span: 12 }}
+                                        md={{ span: 6 }}
                                         className="my-1 pb-3"
                                     >
                                         <Form.Group>
                                             <Form.Control
                                                 type="text"
                                                 className="br-1 p-fileds"
-                                                placeholder="Packege Details"
+                                                placeholder="Round Name Y"
                                                 id="contactno"
                                             />
                                         </Form.Group>
@@ -121,9 +99,24 @@ export const PlacementForm = () => {
                                     >
                                         <Form.Group>
                                             <Form.Control
-                                                type="text"
+                                                as="textarea"
+                                                rows={1}
                                                 className="br-1 p-fileds"
-                                                placeholder="Company Contact No."
+                                                placeholder="Round Name X Description"
+                                                id="contactno"
+                                            />
+                                        </Form.Group>
+                                    </Col>
+                                    <Col
+                                        md={{ span: 12 }}
+                                        className="my-1 pb-3"
+                                    >
+                                        <Form.Group>
+                                            <Form.Control
+                                                as="textarea"
+                                                rows={1}
+                                                className="br-1 p-fileds"
+                                                placeholder="Round Name Y Description"
                                                 id="contactno"
                                             />
                                         </Form.Group>
@@ -132,7 +125,10 @@ export const PlacementForm = () => {
                                         md={{ span: 12, offset: 0 }}
                                         className="mt-3"
                                     >
-                                        <Button className="w-100 br-1 px-2 py-3 bg-da-blue" id="register">
+                                        <Button
+                                            className="w-100 br-1 px-2 py-3 bg-da-blue"
+                                            id="register"
+                                        >
                                             Register
                                         </Button>
                                     </Col>

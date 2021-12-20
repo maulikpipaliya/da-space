@@ -3,6 +3,7 @@ import "./ChatBox.css"
 import MessageForm from "./MessageForm"
 import MyMessage from "./MyMessage"
 import TheirMessage from "./TheirMessage"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const ChatBox = () => {
     return (
@@ -150,7 +151,7 @@ const ChatBox = () => {
                                     </svg>
                                     <input type="file" />
                                 </div>
-                                <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12">
+                                <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 message-block">
                                     <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
                                         <label
                                             className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -172,7 +173,8 @@ const ChatBox = () => {
                                             >
                                                 <legend className="PrivateNotchedOutline-legendLabelled-3">
                                                     <span>
-                                                        Type a new message
+                                                        <i className="fi-rr-link p-1"></i>
+                                                        <i className="fi-rr-chart-histogram p-1"></i>
                                                     </span>
                                                 </legend>
                                             </fieldset>

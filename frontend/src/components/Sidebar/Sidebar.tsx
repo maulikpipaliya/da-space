@@ -103,17 +103,6 @@ const Sidebar = () => {
         <div className="sidebar-container">
             <div
                 className={
-                    selectedTagBell
-                        ? "text-center active abc"
-                        : "text-center abc"
-                }
-                onClick={(e) => tabClickHandler("activity")}
-            >
-                <i className="fi-rr-bell"></i>
-                <p>Activity</p>
-            </div>
-            <div
-                className={
                     selectedTagChat
                         ? "text-center active abc"
                         : "text-center abc"
@@ -122,17 +111,6 @@ const Sidebar = () => {
             >
                 <i className="fi-rr-comment"></i>
                 <p>Chat</p>
-            </div>
-            <div
-                className={
-                    selectedTagTeams
-                        ? "text-center active abc"
-                        : "text-center abc"
-                }
-                onClick={eventHandlerTeams}
-            >
-                <i className="fi-rr-user"></i>
-                <p>Teams</p>
             </div>
             <div
                 className={
@@ -155,17 +133,6 @@ const Sidebar = () => {
             >
                 <i className="fi-rr-test"></i>
                 <p>Exam</p>
-            </div>
-            <div
-                className={
-                    selectedTagCalls
-                        ? "text-center active abc"
-                        : "text-center abc"
-                }
-                onClick={eventHandlerCalls}
-            >
-                <i className="fi-rr-headset"></i>
-                <p>Calls</p>
             </div>
 
             {/* {topOptions.map((option) => {
