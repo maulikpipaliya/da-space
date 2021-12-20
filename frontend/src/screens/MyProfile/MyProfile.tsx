@@ -4,6 +4,7 @@ import { useHistory, useLocation } from "react-router"
 import Header from "../../components/Header/Header"
 import Sidebar from "../../components/Sidebar/Sidebar"
 import { RootState } from "../../store"
+import { Row, Col, Image, Form, Button, Container } from "react-bootstrap"
 import "../HomeScreen/HomeScreen.css"
 
 function useQuery() {
@@ -38,8 +39,79 @@ const MyProfile = () => {
                     <Sidebar />
                 </div>
                 <div className="home-main home-rightside">
-                    {/* Edit Profile Here */}
-                    <div className="col-md-9 personal-info container">
+                    <div className="container">
+                        {/* Edit Profile Here */}
+                        <Form className="border m-5 p-2 br-1">
+                            <div className="text-Left" style={{"color":"#0c4ca3"}}>
+                                <h3 >Personal Info</h3>
+                                <div>
+                                    <hr
+                                        style={{
+                                            height: 2,
+                                        }}
+                                    />
+                                </div>
+                            </div>
+                            <label className="col-lg-3 control-label px-2">
+                                First name:
+                            </label>
+                            <Form.Group
+                                controlId="formBasicEmail"
+                                className="px-2"
+                            >
+                                <Form.Control
+                                    type="text"
+                                    className="px-2"
+                                    value="Jane"
+                                />
+                            </Form.Group>
+                            <label className="col-lg-3 control-label px-2 pt-3">
+                                Last name:
+                            </label>
+                            <Form.Group
+                                controlId="formBasicEmail"
+                                className="px-2"
+                            >
+                                <Form.Control
+                                    type="text"
+                                    className=""
+                                    value="Bishop"
+                                />
+                            </Form.Group>
+                            <label className="col-lg-3 control-label px-2 pt-3">
+                                Email:
+                            </label>
+                            <Form.Group
+                                controlId="formBasicEmail"
+                                className="px-2"
+                            >
+                                <Form.Control
+                                    type="email"
+                                    className=""
+                                    value="janesemail@gmail.com"
+                                />
+                            </Form.Group>
+                            <label className="col-lg-3 control-label px-2 pt-3">
+                                Username:
+                            </label>
+                            <Form.Group
+                                controlId="formBasicEmail"
+                                className="px-2"
+                            >
+                                <Form.Control
+                                    type="text"
+                                    className=""
+                                    value="janeuser"
+                                />
+                            </Form.Group>
+                            <div className="">
+                                <Button className="mt-3 mx-2 my-2 p-2 w-50 bg-da-blue br-1">
+                                    Save Changes
+                                </Button>
+                            </div>
+                        </Form>
+                    </div>
+                    {/* <div className="col-md-9 personal-info container">
                         <h3>Personal info</h3>
 
                         <form className="form-horizontal" role="form">
@@ -108,7 +180,7 @@ const MyProfile = () => {
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
